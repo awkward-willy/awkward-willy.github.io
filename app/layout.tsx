@@ -3,7 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./_components/ThemeProvider";
 import { cn } from "@/lib/utils";
-
+import { Navbar } from "./_components/Navbar";
+import { Footer } from "./_components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -25,7 +26,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="grid h-full grid-flow-row auto-rows-[min-content_auto_min-content]">
+            <Navbar />
+            <main className="p-4">{children}</main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
