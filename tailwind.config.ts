@@ -9,6 +9,15 @@ const config = {
     "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
+
+  fontFamily: {
+    heading: "Poppins",
+    body: "Poppins",
+  },
+  fontWeight: {
+    normal: "400",
+    bold: "700",
+  },
   theme: {
     container: {
       center: true,
