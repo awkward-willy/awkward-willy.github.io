@@ -18,14 +18,19 @@ export const Navbar = () => {
 
   return (
     // background
-    <nav className="fixed top-0 w-full h-12 px-4 border-b shadow-md shadow-background/10 flex items-center">
+    <nav className="top-0 w-full h-12 px-4 border-b shadow-md shadow-background/10 flex items-center">
       <div className="md:max-w-screen-2xl mx-auto flex flex-row items-center w-full justify-around">
         {/* <Logo /> */}
         <h1 className="font-bold">
           <Link href="/">Willy Awkward</Link>
         </h1>
         <div className="space-x-4  md:w-auto flex items-center justify-between">
-          <Button size="default" variant="link" className="hidden md:block">
+          <Button
+            asChild
+            size="default"
+            variant="link"
+            className="hidden md:block"
+          >
             <Link
               href="/"
               className={isActive("/") ? "text-bold underline" : ""}
@@ -33,7 +38,12 @@ export const Navbar = () => {
               Home
             </Link>
           </Button>
-          <Button size="default" variant="link" className="hidden md:block">
+          <Button
+            asChild
+            size="default"
+            variant="link"
+            className="hidden md:block"
+          >
             <Link
               href="/about"
               className={isActive("/about") ? "text-bold underline" : ""}
@@ -41,7 +51,12 @@ export const Navbar = () => {
               About
             </Link>
           </Button>
-          <Button size="default" variant="link" className="hidden md:block">
+          <Button
+            asChild
+            size="default"
+            variant="link"
+            className="hidden md:block"
+          >
             <Link
               href="/project"
               className={isActive("/project") ? "text-bold underline" : ""}
@@ -49,7 +64,12 @@ export const Navbar = () => {
               Project
             </Link>
           </Button>
-          <Button size="default" variant="link" className="hidden md:block">
+          <Button
+            asChild
+            size="default"
+            variant="link"
+            className="hidden md:block"
+          >
             <Link
               href="/experience"
               className={isActive("/experience") ? "text-bold underline" : ""}
@@ -57,7 +77,12 @@ export const Navbar = () => {
               Experience
             </Link>
           </Button>
-          <Button size="default" variant="link" className="hidden md:block">
+          <Button
+            asChild
+            size="default"
+            variant="link"
+            className="hidden md:block"
+          >
             <Link
               href="/post"
               className={isActive("/post") ? "text-bold underline" : ""}
