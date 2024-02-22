@@ -42,7 +42,7 @@ export default function IslandPage() {
             <directionalLight color="white" position={[1, 1, 1]} />
             <directionalLight color="white" position={[-1, -1, -1]} />
             <Scene />
-            <OrbitControls />
+            <OrbitControls enablePan={false} />
           </Stage>
         </Suspense>
         <Preload all />
