@@ -5,7 +5,7 @@ const AboutSection = () => {
     <>
       <h1 className="font-extrabold text-2xl sm:text-3xl">About me</h1>
       <ul>
-        <li className="my-2 text-base sm:text-xl">
+        <li className="mb-2 text-base sm:text-xl">
           Hi, I&apos;m WillyAwkward. Currently a junior student majoring in
           Computer Science and Information Engineering at National Central
           University (NCU).
