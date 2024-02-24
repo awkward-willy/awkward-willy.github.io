@@ -8,7 +8,6 @@ import Link from "next/link";
 
 const ContactLinks = ({ className }: { className?: string }) => {
   const { resolvedTheme } = useTheme();
-
   return (
     <div className={cn("flex", className)}>
       <Button asChild size="icon" variant="ghost">
@@ -33,6 +32,17 @@ const ContactLinks = ({ className }: { className?: string }) => {
             width={500}
             height={500}
             alt="Telegram Link Logo"
+          />
+        </Link>
+      </Button>
+
+      <Button asChild size="icon" variant="ghost">
+        <Link href="mailto:willy1118t@gmail.com">
+          <Image
+            src="/GmailLogo.png"
+            width={500}
+            height={500}
+            alt="Gmail Link Logo"
           />
         </Link>
       </Button>
