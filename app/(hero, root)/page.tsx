@@ -1,4 +1,4 @@
-import ContactLinks from "./_components/ContactLinks";
+import ContactLinks from "../../components/ContactLinks";
 
 export default function HeroPage() {
   return (
