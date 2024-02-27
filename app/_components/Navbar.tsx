@@ -12,6 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 export const Navbar = () => {
   const pathname = usePathname();
   const isActive = (path: string) => path === pathname;
@@ -20,10 +21,18 @@ export const Navbar = () => {
     // background
     <nav className="top-0 w-full h-12 px-4 border-b shadow-md shadow-background/10 flex items-center">
       <div className="md:max-w-screen-2xl mx-auto flex flex-row items-center w-full justify-around">
-        {/* <Logo /> */}
-        <h1 className="font-bold">
-          <Link href="/">Willy Awkward</Link>
-        </h1>
+        <div className="flex gap-2 items-center">
+          <Image
+            src="/avatars/normal.jpg"
+            alt="Avatar Logo"
+            width={30}
+            height={30}
+            className="rounded-full max-[250px]:hidden"
+          />
+          <h1 className="font-bold">
+            <Link href="/">Willy Awkward</Link>
+          </h1>
+        </div>
         <div className="space-x-4  md:w-auto flex items-center justify-between">
           <Button
             asChild
