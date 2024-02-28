@@ -5,7 +5,7 @@ const Constants = {
   },
   education: [
     {
-      school: "National Central University(NCU)",
+      school: "National Central University (NCU)",
       department: "Computer Science and Information Engineering",
       time: "2021-Present",
       icon: "/NCULogo.png",
