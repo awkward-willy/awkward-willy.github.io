@@ -32,7 +32,13 @@ const EducationSection = () => {
                 }}
                 textClassName="text-black"
                 icon={
-                  <Image src={data.icon} alt="icon" width={50} height={50} />
+                  <Image
+                    src={data.icon}
+                    alt="icon"
+                    width={45}
+                    height={45}
+                    className="rounded-xl"
+                  />
                 }
                 iconClassName="flex items-center justify-center"
               >
