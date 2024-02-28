@@ -1,5 +1,12 @@
 import Constants from "../_constants";
-import Image from "next/image";
+// import Image from "next/image";
+
+import dynamic from "next/dynamic";
+import { Skeleton } from "@/components/ui/skeleton";
+const SkillContent = dynamic(() => import("./SkillContent"), {
+  ssr: false,
+  loading: () => <Skeleton className="w-20 h-7" />,
+});
 
 const SkillSection = () => {
   return (
@@ -13,13 +20,10 @@ const SkillSection = () => {
               {Constants.skills[key as keyof typeof Constants.skills].map(
                 (data, index) => {
                   return (
-                    <Image
+                    <SkillContent
                       key={index}
-                      width={0}
-                      height={0}
-                      className="w-auto h-auto"
-                      src={data.image}
-                      alt={data.title}
+                      title={data.title}
+                      image={data.image}
                     />
                   );
                 }
