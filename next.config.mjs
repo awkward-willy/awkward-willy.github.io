@@ -4,6 +4,7 @@ const nextConfig = {
   assetPrefix: process.env.NODE_ENV !== "production" ? undefined : "/",
   reactStrictMode: true,
   images: {
+    unoptimized: process.env.NODE_ENV !== "production" ? false : true,
     dangerouslyAllowSVG: true,
     remotePatterns: [
       {
