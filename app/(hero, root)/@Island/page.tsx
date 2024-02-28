@@ -1,12 +1,6 @@
 "use client";
 import { Canvas, useFrame } from "@react-three/fiber";
-import {
-  OrbitControls,
-  Preload,
-  Stage,
-  useFBX,
-  useHelper,
-} from "@react-three/drei";
+import { OrbitControls, Preload, Stage, useFBX } from "@react-three/drei";
 import { JSX, Suspense, useRef } from "react";
 import { Loader } from "../_components/Loader";
 
