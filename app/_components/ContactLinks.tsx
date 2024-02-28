@@ -21,6 +21,7 @@ const ContactLinks = ({ className }: { className?: string }) => {
             width={500}
             height={500}
             alt="GitHub Link Logo"
+            className="select-none"
           />
         </Link>
       </Button>
@@ -32,6 +33,7 @@ const ContactLinks = ({ className }: { className?: string }) => {
             width={500}
             height={500}
             alt="Telegram Link Logo"
+            className="select-none"
           />
         </Link>
       </Button>
@@ -43,6 +45,7 @@ const ContactLinks = ({ className }: { className?: string }) => {
             width={500}
             height={500}
             alt="Gmail Link Logo"
+            className="select-none"
           />
         </Link>
       </Button>
