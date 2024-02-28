@@ -19,7 +19,7 @@ export const Navbar = () => {
 
   return (
     // background
-    <nav className="top-0 w-full h-12 border-b shadow-md shadow-background/10 flex items-center md:max-w-screen-2xl mx-auto flex-row justify-between pl-4 ml-2">
+    <nav className="top-0 w-full h-12 border-b shadow-md shadow-background/10 flex items-center md:max-w-screen-2xl mx-auto flex-row justify-between px-4 ml-2">
       <div className="flex gap-2 items-center">
         <Image
           src="/avatars/normal.jpg"
