@@ -37,7 +37,7 @@ const EducationSection = () => {
                     alt="icon"
                     width={45}
                     height={45}
-                    className="rounded-xl"
+                    className="rounded-xl select-none"
                   />
                 }
                 iconClassName="flex items-center justify-center"
