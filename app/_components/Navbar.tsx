@@ -27,7 +27,7 @@ export const Navbar = () => {
             alt="Avatar Logo"
             width={30}
             height={30}
-            className="rounded-full max-[250px]:hidden"
+            className="rounded-full max-[250px]:hidden select-none"
           />
           <h1 className="font-bold">
             <Link href="/">Willy Awkward</Link>
