@@ -6,15 +6,26 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
+import { DrawingPinFilledIcon } from "@radix-ui/react-icons";
 import Constants from "../_constants";
 import Image from "next/image";
 
 const EducationSection = () => {
   return (
     <>
-      <h1 className="font-extrabold text-2xl sm:text-3xl">Education</h1>
+      <div className="flex items-center gap-3">
+        <DrawingPinFilledIcon className="scale-x-[-1]" />
+        <h1 className="font-extrabold text-2xl sm:text-3xl after:content-[''] after:block after:w-[85%] after:h-1 after:bg-gradient-to-r from-blue-400 to-transparent">
+          Education
+        </h1>
+      </div>
       <div className="m-3">
-        <VerticalTimeline lineColor="#9DA6B7" animate={true}>
+        <VerticalTimeline
+          lineColor="#9DA6B7"
+          animate={true}
+          layout="1-column-left"
+          className="!ml-0"
+        >
           {Constants.education.map((data, index) => {
             return (
               <VerticalTimelineElement

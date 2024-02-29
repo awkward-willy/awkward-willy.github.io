@@ -3,6 +3,7 @@ import Constants from "../_constants";
 
 import dynamic from "next/dynamic";
 import { Skeleton } from "@/components/ui/skeleton";
+import { DrawingPinFilledIcon } from "@radix-ui/react-icons";
 const SkillContent = dynamic(() => import("./SkillContent"), {
   ssr: false,
   loading: () => <Skeleton className="w-20 h-7" />,
@@ -11,7 +12,12 @@ const SkillContent = dynamic(() => import("./SkillContent"), {
 const SkillSection = () => {
   return (
     <>
-      <h1 className="font-extrabold text-2xl sm:text-3xl">Skill</h1>
+      <div className="flex items-center gap-3">
+        <DrawingPinFilledIcon className="scale-x-[-1]" />
+        <h1 className="font-extrabold text-2xl sm:text-3xl after:content-[''] after:block after:w-[85%] after:h-1 after:bg-gradient-to-r from-blue-400 to-transparent">
+          Skill
+        </h1>
+      </div>
       {Object.keys(Constants.skills).map((key, index) => {
         return (
           <div key={index} className="">
