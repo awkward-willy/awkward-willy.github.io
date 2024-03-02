@@ -13,14 +13,19 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 export const Navbar = () => {
   const pathname = usePathname();
   const isActive = (path: string) => path === pathname;
 
   return (
-    // background
-    <nav className="top-0 w-full h-12 border-b shadow-md shadow-background/10 flex items-center md:max-w-screen-2xl mx-auto flex-row justify-between px-4 ml-2">
-      <div className="flex gap-2 items-center">
+    <nav className="top-0 w-full h-12 border-b shadow-md shadow-background/10 flex items-center flex-row justify-between px-6">
+      <div
+        className={cn(
+          pathname === "/" ? "p-2 md:p-4" : "",
+          "flex gap-2 items-center"
+        )}
+      >
         <Image
           src="/avatars/normal.jpg"
           alt="Avatar Logo"
