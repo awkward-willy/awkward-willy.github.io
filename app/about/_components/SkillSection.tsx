@@ -1,6 +1,4 @@
 import Constants from "../_constants";
-// import Image from "next/image";
-
 import dynamic from "next/dynamic";
 import { Skeleton } from "@/components/ui/skeleton";
 import { DrawingPinFilledIcon } from "@radix-ui/react-icons";
