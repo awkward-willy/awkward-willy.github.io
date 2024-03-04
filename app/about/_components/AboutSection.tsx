@@ -6,7 +6,7 @@ const AboutSection = () => {
     <>
       <div className="flex items-center gap-3">
         <DrawingPinFilledIcon className="scale-x-[-1]" />
-        <h1 className="font-extrabold text-2xl sm:text-3xl after:content-[''] after:block after:w-[85%] after:h-1 after:bg-gradient-to-r from-blue-400 to-transparent">
+        <h1 className="font-extrabold text-2xl sm:text-3xl after:content-[''] after:block after:w-[85%] after:h-1 after:bg-gradient-to-r from-primary to-transparent">
           About me
         </h1>
       </div>
@@ -29,7 +29,7 @@ const AboutSection = () => {
           <div key={index}>
             <div className="flex items-center gap-3">
               <DrawingPinFilledIcon className="scale-x-[-1]" />
-              <h1 className="font-extrabold text-2xl sm:text-3xl after:content-[''] after:block after:w-[85%] after:h-1 after:bg-gradient-to-r from-blue-400 to-transparent">
+              <h1 className="font-extrabold text-2xl sm:text-3xl after:content-[''] after:block after:w-[85%] after:h-1 after:bg-gradient-to-r from-primary to-transparent">
                 {key}
               </h1>
             </div>

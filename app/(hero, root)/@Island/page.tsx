@@ -32,7 +32,7 @@ export default function IslandPage() {
       <Canvas camera={{ position: [6, 2.5, 5], fov: 25 }} frameloop="always">
         <Suspense fallback={<Loader />}>
           <Stage shadows={false} adjustCamera={1.3}>
-            <ambientLight intensity={0.7} />
+            <ambientLight intensity={1.2} />
             <directionalLight color="white" position={[1, 1, 1]} />
             <directionalLight color="white" position={[-1, -1, -1]} />
             <Scene />
