@@ -56,9 +56,9 @@ const EducationSection = () => {
                 <h1 className="vertical-timeline-element-title text-xl font-medium">
                   {data.school}
                 </h1>
-                <h3 className="vertical-timeline-element-subtitle">
+                <h2 className="vertical-timeline-element-subtitle">
                   {data.department}
-                </h3>
+                </h2>
               </VerticalTimelineElement>
             );
           })}
