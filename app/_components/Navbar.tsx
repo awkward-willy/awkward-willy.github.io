@@ -105,7 +105,7 @@ export const Navbar = () => {
         <div className="md:hidden">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="icon">
+              <Button variant="outline" size="icon" aria-label="drop-down-menu">
                 <HamburgerMenuIcon className="h-6 w-6" />
               </Button>
             </DropdownMenuTrigger>
