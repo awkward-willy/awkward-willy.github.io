@@ -43,7 +43,7 @@ const ProjectConstants = {
         "A course project to build a reservation App for study room in NCU.",
         "Pure UI design only.",
       ],
-      Image: "/projects/NCU_Reservation_App.png",
+      Image: "/projects/NCU_Reservation_APP.png",
       Link: "https://github.com/awkward-willy/NCU_Reservation_app_personal",
       Tag: ["Flutter"],
     },
