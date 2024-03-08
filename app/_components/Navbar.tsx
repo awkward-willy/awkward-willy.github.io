@@ -81,19 +81,6 @@ export const Navbar = () => {
           className="hidden md:block"
         >
           <Link
-            href="/experience"
-            className={isActive("/experience") ? "text-bold underline" : ""}
-          >
-            Experience
-          </Link>
-        </Button>
-        <Button
-          asChild
-          size="default"
-          variant="link"
-          className="hidden md:block"
-        >
-          <Link
             href="/post"
             className={isActive("/post") ? "text-bold underline" : ""}
           >
@@ -134,16 +121,7 @@ export const Navbar = () => {
                   Project
                 </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem asChild className="justify-center">
-                <Link
-                  href="/experience"
-                  className={
-                    isActive("/experience") ? "text-bold underline" : ""
-                  }
-                >
-                  Experience
-                </Link>
-              </DropdownMenuItem>
+
               <DropdownMenuItem asChild className="justify-center">
                 <Link
                   href="/post"
