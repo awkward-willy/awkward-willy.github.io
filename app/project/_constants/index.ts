@@ -23,7 +23,7 @@ const ProjectConstants = {
       Title: "Former GitHub Page",
       Feature: ["First Web Page!"],
       Image: "/projects/FormerGitHubPage.png",
-      Link: "https://awkward-willy.github.io/FormerGitHubPage/",
+      Link: "/FormerGitHubPage/",
       Tag: ["HTML", "SCSS", "JavaScript"],
     },
   ],
