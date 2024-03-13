@@ -1,15 +1,10 @@
 import Constants from "../_constants";
-import { DrawingPinFilledIcon } from "@radix-ui/react-icons";
+import Title from "@/app/_components/Title";
 
 const AboutSection = () => {
   return (
     <>
-      <div className="flex items-center gap-3">
-        <DrawingPinFilledIcon className="scale-x-[-1]" />
-        <h1 className="font-extrabold text-2xl sm:text-3xl after:content-[''] after:block after:w-[85%] after:h-1 after:bg-gradient-to-r from-primary to-transparent">
-          About me
-        </h1>
-      </div>
+      <Title content="About Me" />
       <ul>
         <li className="mb-2 text-base sm:text-xl">
           Hi, I&apos;m WillyAwkward. Currently a junior student majoring in
@@ -27,12 +22,7 @@ const AboutSection = () => {
       {Object.entries(Constants.about).map(([key, value], index) => {
         return (
           <div key={index}>
-            <div className="flex items-center gap-3">
-              <DrawingPinFilledIcon className="scale-x-[-1]" />
-              <h1 className="font-extrabold text-2xl sm:text-3xl after:content-[''] after:block after:w-[85%] after:h-1 after:bg-gradient-to-r from-primary to-transparent">
-                {key}
-              </h1>
-            </div>
+            <Title content={key} />
             <ul className="list-disc list-inside text-base sm:text-xl">
               {value.map((item, index) => {
                 return (

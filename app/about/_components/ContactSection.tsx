@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import { Skeleton } from "@/components/ui/skeleton";
-import { DrawingPinFilledIcon } from "@radix-ui/react-icons";
+import Title from "@/app/_components/Title";
 const ContactLinks = dynamic(() => import("@/app/_components/ContactLinks"), {
   ssr: false,
   loading: () => (
@@ -15,12 +15,7 @@ const ContactLinks = dynamic(() => import("@/app/_components/ContactLinks"), {
 const ContactSection = () => {
   return (
     <>
-      <div className="flex items-center gap-3">
-        <DrawingPinFilledIcon className="scale-x-[-1]" />
-        <h1 className="font-extrabold text-2xl sm:text-3xl after:content-[''] after:block after:w-[85%] after:h-1 after:bg-gradient-to-r from-primary to-transparent">
-          Contact
-        </h1>
-      </div>
+      <Title content="Contact Me" />
       <ContactLinks />
     </>
   );

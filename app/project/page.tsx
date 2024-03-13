@@ -4,6 +4,7 @@ import Image from "next/image";
 import { DotIcon, DoubleArrowRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import Title from "../_components/Title";
 export const metadata: Metadata = {
   title: "Project",
 };
@@ -12,7 +13,7 @@ const ProjectPage = () => {
   return (
     <>
       <div className="flex flex-col m-2 gap-3">
-        <h1 className="font-extrabold text-2xl sm:text-3xl">Projects</h1>
+        <Title content="Projects" />
         {Object.keys(ProjectConstants).map((key, index) => {
           return (
             <div key={index} className="flex flex-col gap-3 my-4">

@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "./ModeToggle";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
@@ -14,6 +13,7 @@ import {
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { tektur } from "@/app/fonts";
 export const Navbar = () => {
   const pathname = usePathname();
   const isActive = (path: string) => path === pathname;
@@ -33,7 +33,7 @@ export const Navbar = () => {
           height={30}
           className="rounded-full max-[250px]:hidden select-none"
         />
-        <h1 className="font-bold">
+        <h1 className={cn(tektur.className, "font-bold")}>
           <Link href="/">Willy Awkward</Link>
         </h1>
       </div>
