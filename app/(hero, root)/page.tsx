@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import { Skeleton } from "@/components/ui/skeleton";
-
+import { tektur } from "../fonts";
+import { cn } from "@/lib/utils";
 const ContactLinks = dynamic(() => import("../_components/ContactLinks"), {
   ssr: false,
   loading: () => (
@@ -14,7 +15,12 @@ const ContactLinks = dynamic(() => import("../_components/ContactLinks"), {
 
 export default function HeroPage() {
   return (
-    <section className="flex flex-col items-center justify-center h-full text-left">
+    <section
+      className={cn(
+        tektur.className,
+        "flex flex-col items-center justify-center h-full text-left"
+      )}
+    >
       <p className="text-xl font-bold sm:text-2xl md:text-4xl lg:text-2xl leading-snug w-[90%]">
         Hello there! 👋 I&apos;m
       </p>
