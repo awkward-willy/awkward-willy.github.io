@@ -44,7 +44,7 @@ My favorite animals are:
 | Wanna know more? | [Click here!](/about) |
 
 ### All of my avatars!
-| <img src="/avatars/normal.jpg" alt="Normal avatar" title="Normal avatar" width="300" height="300">  | <img src="/avatars/masked.jpg" alt="Masked avatar" title="Masked avatar" width="300" height="300"> | <img src="/avatars/Christmas.jpg" alt="Christmas avatar" title="Ahh... So Cold!" width="300" height="300"> | <img src="/avatars/detective.jpg" alt="Detective avatar" title="Why are you looking at me?" width="300" height="300"> |
+| <img src="/avatars/normal.jpg" alt="Normal avatar" title="Normal avatar" width="300" height="300">  | <img src="/avatars/masked.jpg" alt="Masked avatar" title="Masked avatar" width="300" height="300"> | <img src="/avatars/christmas.jpg" alt="Christmas avatar" title="Ahh... So Cold!" width="300" height="300"> | <img src="/avatars/detective.jpg" alt="Detective avatar" title="Why are you looking at me?" width="300" height="300"> |
 | --- | --- |
 
 At last I want to show off long lines of text. So I'm singing a song for you!
