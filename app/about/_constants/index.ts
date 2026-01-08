@@ -5,9 +5,15 @@ const Constants = {
   },
   education: [
     {
+      school: "National Taiwan University (NTU)",
+      department: "Graduate Institute of Networking and Multimedia (GINM)",
+      time: "2025-Present",
+      icon: "/NTULogo.jpg",
+    },
+    {
       school: "National Central University (NCU)",
       department: "Computer Science and Information Engineering",
-      time: "2021-Present",
+      time: "2021-2025",
       icon: "/NCULogo.png",
     },
     {
