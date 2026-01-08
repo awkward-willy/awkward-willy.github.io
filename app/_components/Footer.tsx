@@ -10,7 +10,7 @@ export const Footer = () => {
   return (
     <footer className="bottom-0 w-full h-20 md:h-12 border-t flex items-center">
       <div className="md:max-w-screen-2xl mx-auto flex flex-col md:flex-row items-center w-full justify-evenly text-center text-sm md:textmd">
-        <p>Copyright © 2024 Willy_Awkward </p>
+        <p>Copyright © 2026 Willy_Awkward </p>
         <div className="underline">
           <Popover>
             <PopoverTrigger asChild>
