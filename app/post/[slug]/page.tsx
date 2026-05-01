@@ -1,11 +1,12 @@
 import fs from "fs";
-import { Metadata } from "next";
-import Markdown from "markdown-to-jsx";
+import type { Metadata } from "next";
+import Markdown, { type MarkdownToJSX } from "markdown-to-jsx";
 import Link from "next/link";
 import { getPostsMetadata } from "../_util/utils";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { RichArticlePreBlock } from "../_components/RichArticlePreBlock";
+import type { ComponentPropsWithoutRef } from "react";
 
 export const metadata: Metadata = {
   title: "Post",
@@ -26,9 +27,41 @@ const getPostContent = (slug: string) => {
   return content;
 };
 
-const SlugPage = (props: { params: { slug: string } }) => {
-  const slug = props.params.slug;
-  const Metadata = getPostsMetadata().find((post) => post.slug === slug);
+const MarkdownImage = ({
+  src,
+  alt = "",
+  title,
+  width,
+  height,
+}: ComponentPropsWithoutRef<"img">) => {
+  if (typeof src !== "string") {
+    return null;
+  }
+
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      title={title}
+      width={Number(width ?? 300)}
+      height={Number(height ?? 300)}
+      className="rounded-md"
+    />
+  );
+};
+
+const markdownOptions = {
+  overrides: {
+    pre: RichArticlePreBlock,
+    img: {
+      component: MarkdownImage,
+    },
+  },
+} as unknown as MarkdownToJSX.Options;
+
+const SlugPage = async (props: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await props.params;
+  const postMetadata = getPostsMetadata().find((post) => post.slug === slug);
   const content = getPostContent(slug);
   return (
     <div className="flex flex-col m-2">
@@ -41,43 +74,17 @@ const SlugPage = (props: { params: { slug: string } }) => {
       </Button>
       <div className="px-5 pt-10 pb-10 bg-foreground/10 rounded-md text-primary my-3">
         <h1 className="text-2xl md:text-4xl font-bold text-center">
-          {Metadata?.title}
+          {postMetadata?.title}
         </h1>
         <h2 className="text-lg md:text-2xl text-center">
-          {Metadata?.subtitle}
+          {postMetadata?.subtitle}
         </h2>
-        <h2 className="text-sm md:text-base text-center">{Metadata?.date}</h2>
+        <h2 className="text-sm md:text-base text-center">
+          {postMetadata?.date}
+        </h2>
       </div>
       <article className="prose prose-gray dark:prose-invert lg:prose-xl break-words max-w-full p-5">
-        <Markdown
-          options={{
-            overrides: {
-              pre: RichArticlePreBlock,
-              img: {
-                component: (props: {
-                  src: string;
-                  alt: string;
-                  title?: string;
-                  width?: string;
-                  height?: string;
-                }) => {
-                  return (
-                    <Image
-                      src={props.src}
-                      alt={props.alt}
-                      title={props.title}
-                      width={parseInt(props.width ?? "300")}
-                      height={parseInt(props.height ?? "300")}
-                      className="rounded-md"
-                    />
-                  );
-                },
-              },
-            },
-          }}
-        >
-          {content}
-        </Markdown>
+        <Markdown options={markdownOptions}>{content}</Markdown>
       </article>
       <Button
         variant="link"
