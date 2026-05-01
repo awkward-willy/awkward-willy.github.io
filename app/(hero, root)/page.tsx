@@ -1,17 +1,6 @@
-import dynamic from "next/dynamic";
-import { Skeleton } from "@/components/ui/skeleton";
 import { tektur } from "../fonts";
 import { cn } from "@/lib/utils";
-const ContactLinks = dynamic(() => import("../_components/ContactLinks"), {
-  ssr: false,
-  loading: () => (
-    <div className="flex items-start gap-2 w-[90%]">
-      <Skeleton className="w-12 h-12 rounded-xl" />
-      <Skeleton className="w-12 h-12 rounded-xl" />
-      <Skeleton className="w-12 h-12 rounded-xl" />
-    </div>
-  ),
-});
+import ContactLinks from "../_components/DynamicContactLinks";
 
 export default function HeroPage() {
   return (

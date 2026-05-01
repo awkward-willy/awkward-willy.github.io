@@ -1,11 +1,6 @@
 import Constants from "../_constants";
-import dynamic from "next/dynamic";
-import { Skeleton } from "@/components/ui/skeleton";
 import Title from "@/app/_components/Title";
-const SkillContent = dynamic(() => import("./SkillContent"), {
-  ssr: false,
-  loading: () => <Skeleton className="w-20 h-7" />,
-});
+import SkillContent from "./DynamicSkillContent";
 
 const SkillSection = () => {
   return (

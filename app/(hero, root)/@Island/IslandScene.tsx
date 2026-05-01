@@ -1,0 +1,50 @@
+"use client";
+
+import { Canvas, useFrame } from "@react-three/fiber";
+import { OrbitControls, Preload, Stage, useFBX } from "@react-three/drei";
+import { JSX, Suspense, useRef } from "react";
+import type { Object3D } from "three";
+import { Loader } from "../_components/Loader";
+
+const Scene = (
+  props:
+    | JSX.IntrinsicAttributes
+    | { object: object }
+    | {
+        [properties: string]: any;
+      }
+) => {
+  const fbx = useFBX("/Model.fbx");
+  const ref = useRef<Object3D>(null);
+  useFrame((_, delta) => {
+    if (ref.current) {
+      ref.current.rotation.y += delta * 0.2;
+    }
+  });
+  return (
+    <primitive
+      {...props}
+      ref={ref}
+      object={fbx}
+      scale={0.005}
+      position={[0, -1.3, 0]}
+    />
+  );
+};
+
+export default function IslandScene() {
+  return (
+    <Canvas camera={{ position: [6, 2.5, 5], fov: 25 }} frameloop="always">
+      <Suspense fallback={<Loader />}>
+        <Stage shadows={false} adjustCamera={1.3}>
+          <ambientLight intensity={1.2} />
+          <directionalLight color="white" position={[1, 1, 1]} />
+          <directionalLight color="white" position={[-1, -1, -1]} />
+          <Scene />
+          <OrbitControls enablePan={false} minDistance={2.5} maxDistance={10} />
+        </Stage>
+      </Suspense>
+      <Preload all />
+    </Canvas>
+  );
+}
